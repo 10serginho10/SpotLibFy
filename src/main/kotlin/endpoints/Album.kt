@@ -92,8 +92,8 @@ object Album {
      * Type Request: GET
      *
      * Get Spotify catalog information for a single album.
-     * @param id Ver [ID_DOC]
-     * @param market Ver [MARKET_DOC]
+     * @param id See [ID_DOC]
+     * @param market See [MARKET_DOC]
      * @author Serginho
      * @since 0.0.2
      */
@@ -103,8 +103,8 @@ object Album {
      * Type Request: GET
      *
      * Get Spotify catalog information for multiple albums identified by their Spotify IDs.
-     * @param ids Ver [IDS_DOC]
-     * @param market Ver [MARKET_DOC]
+     * @param ids See [IDS_DOC]
+     * @param market See [MARKET_DOC]
      * @author Serginho
      * @since 0.0.2
      */
@@ -115,10 +115,10 @@ object Album {
      *
      * Get Spotify catalog information about an album’s tracks. Optional parameters can be used to limit the number of
      * tracks returned.
-     * @param id Ver [ID_DOC]
-     * @param market Ver [MARKET_DOC]
-     * @param limit Ver [LIMIT_DOC]
-     * @param offset Ver [OFFSET_DOC]
+     * @param id See [ID_DOC]
+     * @param market See [MARKET_DOC]
+     * @param limit See [LIMIT_DOC]
+     * @param offset See [OFFSET_DOC]
      * @author Serginho
      * @since 0.0.2
      */
@@ -132,9 +132,11 @@ object Album {
      *
      * Scopes Required: [USER_LIBRARY_READ]
      *
-     * @param limit Ver [LIMIT_DOC]
-     * @param offset Ver [OFFSET_DOC]
-     * @param market Ver [MARKET_DOC]
+     * @param limit See [LIMIT_DOC]
+     * @param offset See [OFFSET_DOC]
+     * @param market See [MARKET_DOC]
+     * @author Serginho
+     * @since 0.0.2
      */
     fun getUsersSavedAlbums(limit: Int = 20, offset: Int = 0, market: String = "") =
         "$ENDPOINT_USER?limit=$limit&offset=$offset&market=$market"
@@ -146,7 +148,9 @@ object Album {
      *
      * Scopes Required: [USER_LIBRARY_MODIFY]
      *
-     * @param ids Ver [IDS_DOC]
+     * @param ids See [IDS_DOC]
+     * @author Serginho
+     * @since 0.0.2
      */
     fun saveAlbumsCurrentUser(ids: String) = "$ENDPOINT_USER?ids=$ids"
 
@@ -157,7 +161,9 @@ object Album {
      *
      * Scopes Required: [USER_LIBRARY_MODIFY]
      *
-     * @param ids Ver [IDS_DOC]
+     * @param ids See [IDS_DOC]
+     * @author Serginho
+     * @since 0.0.2
      */
     fun removeAlbumsCurrentUser(ids: String) = saveAlbumsCurrentUser(ids)
 
@@ -168,7 +174,9 @@ object Album {
      *
      * Scopes Required: [USER_LIBRARY_READ]
      *
-     * @param ids Ver [IDS_DOC]
+     * @param ids See [IDS_DOC]
+     * @author Serginho
+     * @since 0.0.2
      */
     fun checkAlbumsCurrentUser(ids: String) = "$ENDPOINT_USER/contains?ids=$ids"
 
@@ -177,8 +185,10 @@ object Album {
      *
      * Get a list of new album releases featured in Spotify (shown, for example, on a Spotify player’s “Browse” tab).
      *
-     * @param limit Ver [LIMIT_DOC]
-     * @param offset Ver [OFFSET_DOC]
+     * @param limit See [LIMIT_DOC]
+     * @param offset See [OFFSET_DOC]
+     * @author Serginho
+     * @since 0.0.2
      */
     fun getNewReleases(limit: Int = 20, offset: Int = 0) =
         "https://api.spotify.com/v1/browse/new-releases?limit=$limit&offset=$offset"
