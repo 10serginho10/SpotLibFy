@@ -60,11 +60,9 @@ object AudioBook {
     /**
      * Parameter limit
      *
-     * The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50.
+     * The maximum number of items to return.
      *
-     * Default: limit=20,
-     * Range: 1 - 50,
-     * Example: limit=10
+     * Default: limit=20, Range: 1 - 50, Example: limit=10
      * @author Serginho
      * @since 0.0.2
      */
@@ -75,8 +73,7 @@ object AudioBook {
      *
      * The index of the first item to return. Default: 0 (the first item). Use with limit to get the next set of items.
      *
-     * Default: offset=0,
-     * Example: offset=10
+     * Default: offset=0, Example: offset=10
      * @author Serginho
      * @since 0.0.2
      */

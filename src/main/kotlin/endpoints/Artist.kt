@@ -1,5 +1,13 @@
 package endpoints
 
+import endpoints.Artist.IDS_DOC
+import endpoints.Artist.ID_DOC
+import endpoints.Artist.INCLUDE_GROUPS_DOC
+import endpoints.Artist.LIMIT_DOC
+import endpoints.Artist.MARKET_DOC
+import endpoints.Artist.OFFSET_DOC
+
+
 /**
  * Contains endpoints referenced to artists
  * @author Serginho
@@ -70,11 +78,9 @@ object Artist {
     /**
      * Parameter limit
      *
-     * The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50.
+     * The maximum number of items to return.
      *
-     * Default: limit=20,
-     * Range: 0 - 50,
-     * Example: limit=10
+     * Default: limit=20, Range: 0 - 50, Example: limit=10
      * @author Serginho
      * @since 0.0.2
      */
@@ -85,8 +91,7 @@ object Artist {
      *
      * The index of the first item to return. Default: 0 (the first object). Use with limit to get the next set of items.
      *
-     * Default: offset=0,
-     * Example: offset=5
+     * Default: offset=0, Example: offset=5
      * @author Serginho
      * @since 0.0.2
      */
@@ -117,7 +122,7 @@ object Artist {
      *
      * Get a list of albums released by an artist.
      * @param id See [ID_DOC]
-     * @param include_groups See [INCLUDE_GROUPS_DOC]
+     * @param includeGroups See [INCLUDE_GROUPS_DOC]
      * @param market See [MARKET_DOC]
      * @param limit See [LIMIT_DOC]
      * @param offset See [OFFSET_DOC]
@@ -125,8 +130,8 @@ object Artist {
      * @since 0.0.2
      */
     fun getArtistAlbums(
-        id: String, include_groups: String = "", market: String = "", limit: Int = 20, offset: Int = 0
-    ) = "$ENDPOINT/$id/albums?include_groups=$include_groups&market=$market&limit=$limit&offset=$offset"
+        id: String, includeGroups: String = "", market: String = "", limit: Int = 20, offset: Int = 0
+    ) = "$ENDPOINT/$id/albums?include_groups=$includeGroups&market=$market&limit=$limit&offset=$offset"
 
     /**
      * Type Request: GET

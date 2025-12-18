@@ -1,7 +1,12 @@
 package endpoints
 
-import spotlibfy.scopes.Scopes.USER_LIBRARY_READ
+import endpoints.Album.IDS_DOC
+import endpoints.Album.ID_DOC
+import endpoints.Album.LIMIT_DOC
+import endpoints.Album.MARKET_DOC
+import endpoints.Album.OFFSET_DOC
 import spotlibfy.scopes.Scopes.USER_LIBRARY_MODIFY
+import spotlibfy.scopes.Scopes.USER_LIBRARY_READ
 
 /**
  * Contains endpoints referenced to albums
@@ -64,11 +69,9 @@ object Album {
     /**
      * Parameter limit
      *
-     * The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50.
+     * The maximum number of items to return.
      *
-     * Default: limit=20,
-     * Range: 0 - 50,
-     * Example: limit=10
+     * Default: limit=20, Range: 0 - 50, Example: limit=10
      * @author Serginho
      * @since 0.0.2
      */
@@ -80,8 +83,7 @@ object Album {
      *
      * The index of the first item to return. Default: 0 (the first object). Use with limit to get the next set of items.
      *
-     * Default: offset=0,
-     * Example: offset=5
+     * Default: offset=0, Example: offset=5
      * @author Serginho
      * @since 0.0.2
      */
@@ -191,5 +193,4 @@ object Album {
      */
     fun getNewReleases(limit: Int = 20, offset: Int = 0) =
         "https://api.spotify.com/v1/browse/new-releases?limit=$limit&offset=$offset"
-
 }

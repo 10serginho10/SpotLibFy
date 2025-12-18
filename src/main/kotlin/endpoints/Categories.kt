@@ -38,9 +38,7 @@ object Categories {
      *
      * The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50.
      *
-     * Default: limit=20,
-     * Range: 0 - 50,
-     * Example: limit=10
+     * Default: limit=20, Range: 0 - 50, Example: limit=10
      * @author Serginho
      * @since 0.0.2
      */
@@ -51,8 +49,7 @@ object Categories {
      *
      * The index of the first item to return. Default: 0 (the first item). Use with limit to get the next set of items.
      *
-     * Default: offset=0,
-     * Example: offset=5
+     * Default: offset=0, Example: offset=5
      * @author Serginho
      * @since 0.0.2
      */
