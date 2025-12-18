@@ -1,39 +1,37 @@
 package endpoints
 
-import spotlibfy.scopes.Scopes.USER_LIBRARY_READ
+import endpoints.AudioBook.IDS_DOC
+import endpoints.AudioBook.ID_DOC
+import endpoints.AudioBook.LIMIT_DOC
+import endpoints.AudioBook.MARKET_DOC
+import endpoints.AudioBook.OFFSET_DOC
 import spotlibfy.scopes.Scopes.USER_LIBRARY_MODIFY
+import spotlibfy.scopes.Scopes.USER_LIBRARY_READ
 
 /**
- * Contains endpoints referenced to albums
+ * Contains endpoints referenced to artists
  * @author Serginho
  * @since 0.0.2
  */
-object Album {
+object AudioBook {
     /**
-     * Endpoint of the albums
+     * Endpoint of the AudioBooks
      * @author Serginho
      * @since 0.0.2
      */
-    const val ENDPOINT = "https://api.spotify.com/v1/albums"
-
-    /**
-     * Endpoint of users albums
-     * @author Serginho
-     * @since 0.0.2
-     */
-    const val ENDPOINT_USER = "https://api.spotify.com/v1/me/albums"
+    const val ENDPOINT = "https://api.spotify.com/v1/audio-books"
+    const val ENDPOINT_USER = "https://api.spotify.com/v1/me/audio-books"
 
     /**
      * Parameter id
      *
-     * The Spotify ID for the album.
+     * The Spotify ID for the audiobook.
      *
-     * Example: 4aawyAB9vmqN3uQ7FjRGTy.
+     * Example: 7iHfbu1YPACw6oZPAFJtqe
      * @author Serginho
      * @since 0.0.2
      */
     private val ID_DOC = Unit
-
 
     /**
      * Parameter market
@@ -51,13 +49,11 @@ object Album {
     private val MARKET_DOC = Unit
 
     /**
-     * Parameter ids
+     *Parameter ids
      *
-     * A comma-separated list of the Spotify IDs for the albums. Maximum: 20 IDs.
+     * A comma-separated list of the Spotify IDs.
      *
-     * Example: ids=382ObEPsp2rxGrnsizN5TX,1A2GTWGtFfWp7KSQTwWOyo,2noRn2Aes5aoNVsU6iWThc
-     * @author Serginho
-     * @since 0.0.2
+     * Example: ids=18yVqkdbdRvS24c0Ilj2ci,1HGw3J3NxZO1TP1BTtVhpZ,7iHfbu1YPACw6oZPAFJtqe
      */
     private val IDS_DOC = Unit
 
@@ -67,21 +63,20 @@ object Album {
      * The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50.
      *
      * Default: limit=20,
-     * Range: 0 - 50,
+     * Range: 1 - 50,
      * Example: limit=10
      * @author Serginho
      * @since 0.0.2
      */
     private val LIMIT_DOC = Unit
 
-
     /**
      * Parameter offset
      *
-     * The index of the first item to return. Default: 0 (the first object). Use with limit to get the next set of items.
+     * The index of the first item to return. Default: 0 (the first item). Use with limit to get the next set of items.
      *
      * Default: offset=0,
-     * Example: offset=5
+     * Example: offset=10
      * @author Serginho
      * @since 0.0.2
      */
@@ -90,30 +85,32 @@ object Album {
     /**
      * Type Request: GET
      *
-     * Get Spotify catalog information for a single album.
+     * Get Spotify catalog information for a single audiobook. Audiobooks are only available within the US, UK, Canada,
+     * Ireland, New Zealand and Australia markets.
      * @param id See [ID_DOC]
      * @param market See [MARKET_DOC]
      * @author Serginho
      * @since 0.0.2
      */
-    fun getAlbum(id: String, market: String = "") = "$ENDPOINT/$id?market=$market"
+    fun getAudioBook(id: String, market: String = "") = "$ENDPOINT/$id?market=$market"
 
     /**
      * Type Request: GET
      *
-     * Get Spotify catalog information for multiple albums identified by their Spotify IDs.
+     * Get Spotify catalog information for several audiobooks identified by their Spotify IDs. Audiobooks are only
+     * available within the US, UK, Canada, Ireland, New Zealand and Australia markets.
      * @param ids See [IDS_DOC]
      * @param market See [MARKET_DOC]
      * @author Serginho
      * @since 0.0.2
      */
-    fun getSeveralAlbums(ids: String, market: String = "") = "$ENDPOINT/?ids=$ids&market=$market"
+    fun getAudioBooks(ids: String, market: String) = "$ENDPOINT/?ids=$ids&market=$market"
 
     /**
      * Type Request: GET
      *
-     * Get Spotify catalog information about an album’s tracks. Optional parameters can be used to limit the number of
-     * tracks returned.
+     * Get Spotify catalog information about an audiobook's chapters. Audiobooks are only available within the US, UK,
+     * Canada, Ireland, New Zealand and Australia markets.
      * @param id See [ID_DOC]
      * @param market See [MARKET_DOC]
      * @param limit See [LIMIT_DOC]
@@ -121,75 +118,55 @@ object Album {
      * @author Serginho
      * @since 0.0.2
      */
-    fun getAlbumTracks(id: String, market: String = "", limit: Int = 20, offset: Int = 0) =
-        "$ENDPOINT/$id/tracks?market=$market&limit=$limit&offset=$offset"
+    fun getAudioBookChapters(id: String, market: String = "", limit: Int = 20, offset: Int = 0) =
+        "$ENDPOINT/$id/chapters?market=$market&limit=$limit&offset=$offset"
 
     /**
      * Type Request: GET
      *
-     * Get a list of the albums saved in the current Spotify user's 'Your Music' library.
+     * Get a list of the audiobooks saved in the current Spotify user's 'Your Music' library.
      *
      * Scopes Required: [USER_LIBRARY_READ]
-     *
      * @param limit See [LIMIT_DOC]
      * @param offset See [OFFSET_DOC]
-     * @param market See [MARKET_DOC]
      * @author Serginho
      * @since 0.0.2
      */
-    fun getUsersSavedAlbums(limit: Int = 20, offset: Int = 0, market: String = "") =
-        "$ENDPOINT_USER?limit=$limit&offset=$offset&market=$market"
+    fun getUserSavedAudioBooks(limit: Int = 20, offset: Int = 0) = "$ENDPOINT_USER?limit=$limit&offset=$offset"
 
     /**
      * Type Request: PUT
      *
-     * Save one or more albums to the current user's 'Your Music' library.
+     * Save one or more audiobooks to the current Spotify user's library.
      *
      * Scopes Required: [USER_LIBRARY_MODIFY]
-     *
      * @param ids See [IDS_DOC]
      * @author Serginho
      * @since 0.0.2
      */
-    fun saveAlbumsCurrentUser(ids: String) = "$ENDPOINT_USER?ids=$ids"
+    fun saveAudioBooksCurrentUser(ids: String) = "$ENDPOINT_USER?ids=$ids"
 
     /**
      * Type Request: DELETE
      *
-     * Remove one or more albums from the current user's 'Your Music' library.
+     * Remove one or more audiobooks from the Spotify user's library.
      *
      * Scopes Required: [USER_LIBRARY_MODIFY]
-     *
      * @param ids See [IDS_DOC]
      * @author Serginho
      * @since 0.0.2
      */
-    fun removeAlbumsCurrentUser(ids: String) = saveAlbumsCurrentUser(ids)
+    fun removeAudioBooksCurrentUser(ids: String) = saveAudioBooksCurrentUser(ids)
 
     /**
      * Type Request: GET
      *
-     * Check if one or more albums is already saved in the current Spotify user's 'Your Music' library.
+     * Check if one or more audiobooks are already saved in the current Spotify user's library.
      *
      * Scopes Required: [USER_LIBRARY_READ]
-     *
      * @param ids See [IDS_DOC]
      * @author Serginho
      * @since 0.0.2
      */
-    fun checkAlbumsCurrentUser(ids: String) = "$ENDPOINT_USER/contains?ids=$ids"
-
-    /**
-     * Type Request: GET
-     *
-     * Get a list of new album releases featured in Spotify (shown, for example, on a Spotify player’s “Browse” tab).
-     *
-     * @param limit See [LIMIT_DOC]
-     * @param offset See [OFFSET_DOC]
-     * @author Serginho
-     * @since 0.0.2
-     */
-    fun getNewReleases(limit: Int = 20, offset: Int = 0) =
-        "https://api.spotify.com/v1/browse/new-releases?limit=$limit&offset=$offset"
-
+    fun checkAudioBooksCurrentUser(ids: String) = "$ENDPOINT_USER/contains?ids=$ids"
 }
