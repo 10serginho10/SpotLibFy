@@ -48,6 +48,7 @@ object Episode {
      * account in the account settings.
      *
      * Example: market=ES
+     * @see [Market]
      * @author Serginho
      * @since 0.0.2
      */
