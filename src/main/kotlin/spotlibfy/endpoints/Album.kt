@@ -1,10 +1,10 @@
-package endpoints
+package spotlibfy.endpoints
 
-import endpoints.Album.IDS_DOC
-import endpoints.Album.ID_DOC
-import endpoints.Album.LIMIT_DOC
-import endpoints.Album.MARKET_DOC
-import endpoints.Album.OFFSET_DOC
+import spotlibfy.endpoints.Album.IDS_DOC
+import spotlibfy.endpoints.Album.ID_DOC
+import spotlibfy.endpoints.Album.LIMIT_DOC
+import spotlibfy.endpoints.Album.MARKET_DOC
+import spotlibfy.endpoints.Album.OFFSET_DOC
 import spotlibfy.scopes.Scopes.USER_LIBRARY_MODIFY
 import spotlibfy.scopes.Scopes.USER_LIBRARY_READ
 

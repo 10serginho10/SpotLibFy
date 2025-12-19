@@ -1,10 +1,10 @@
-package endpoints
+package spotlibfy.endpoints
 
-import endpoints.AudioBook.IDS_DOC
-import endpoints.AudioBook.ID_DOC
-import endpoints.AudioBook.LIMIT_DOC
-import endpoints.AudioBook.MARKET_DOC
-import endpoints.AudioBook.OFFSET_DOC
+import spotlibfy.endpoints.AudioBook.IDS_DOC
+import spotlibfy.endpoints.AudioBook.ID_DOC
+import spotlibfy.endpoints.AudioBook.LIMIT_DOC
+import spotlibfy.endpoints.AudioBook.MARKET_DOC
+import spotlibfy.endpoints.AudioBook.OFFSET_DOC
 import spotlibfy.scopes.Scopes.USER_LIBRARY_MODIFY
 import spotlibfy.scopes.Scopes.USER_LIBRARY_READ
 

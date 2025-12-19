@@ -1,11 +1,11 @@
-package endpoints
+package spotlibfy.endpoints
 
-import endpoints.Artist.IDS_DOC
-import endpoints.Artist.ID_DOC
-import endpoints.Artist.INCLUDE_GROUPS_DOC
-import endpoints.Artist.LIMIT_DOC
-import endpoints.Artist.MARKET_DOC
-import endpoints.Artist.OFFSET_DOC
+import spotlibfy.endpoints.Artist.IDS_DOC
+import spotlibfy.endpoints.Artist.ID_DOC
+import spotlibfy.endpoints.Artist.INCLUDE_GROUPS_DOC
+import spotlibfy.endpoints.Artist.LIMIT_DOC
+import spotlibfy.endpoints.Artist.MARKET_DOC
+import spotlibfy.endpoints.Artist.OFFSET_DOC
 
 
 /**

@@ -1,16 +1,16 @@
-package endpoints
+package spotlibfy.endpoints
 
-import endpoints.Playlist.ADDITIONAL_TYPES_DOC
-import endpoints.Playlist.CATEGORY_ID_DOC
-import endpoints.Playlist.FIELDS_DOC
-import endpoints.Playlist.LIMIT_DOC
-import endpoints.Playlist.Locale_DOC
-import endpoints.Playlist.MARKET_DOC
-import endpoints.Playlist.OFFSET_DOC
-import endpoints.Playlist.PLAYLIST_ID_DOC
-import endpoints.Playlist.POSITION_DOC
-import endpoints.Playlist.URIS_DOC
-import endpoints.Playlist.USER_ID_DOC
+import spotlibfy.endpoints.Playlist.ADDITIONAL_TYPES_DOC
+import spotlibfy.endpoints.Playlist.CATEGORY_ID_DOC
+import spotlibfy.endpoints.Playlist.FIELDS_DOC
+import spotlibfy.endpoints.Playlist.LIMIT_DOC
+import spotlibfy.endpoints.Playlist.Locale_DOC
+import spotlibfy.endpoints.Playlist.MARKET_DOC
+import spotlibfy.endpoints.Playlist.OFFSET_DOC
+import spotlibfy.endpoints.Playlist.PLAYLIST_ID_DOC
+import spotlibfy.endpoints.Playlist.POSITION_DOC
+import spotlibfy.endpoints.Playlist.URIS_DOC
+import spotlibfy.endpoints.Playlist.USER_ID_DOC
 import spotlibfy.scopes.Scopes.*
 
 /**

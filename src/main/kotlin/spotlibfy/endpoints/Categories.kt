@@ -1,9 +1,9 @@
-package endpoints
+package spotlibfy.endpoints
 
-import endpoints.Categories.CATEGORY_ID_DOC
-import endpoints.Categories.LIMIT_DOC
-import endpoints.Categories.LOCALE_DOC
-import endpoints.Categories.OFFSET_DOC
+import spotlibfy.endpoints.Categories.CATEGORY_ID_DOC
+import spotlibfy.endpoints.Categories.LIMIT_DOC
+import spotlibfy.endpoints.Categories.LOCALE_DOC
+import spotlibfy.endpoints.Categories.OFFSET_DOC
 
 
 /**

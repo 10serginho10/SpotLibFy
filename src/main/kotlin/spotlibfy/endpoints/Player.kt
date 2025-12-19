@@ -1,14 +1,14 @@
-package endpoints
+package spotlibfy.endpoints
 
-import endpoints.Player.ADDITIONAL_TYPES_DOC
-import endpoints.Player.AFTER_DOC
-import endpoints.Player.BEFORE_DOC
-import endpoints.Player.DEVICE_ID_DOC
-import endpoints.Player.LIMIT_DOC
-import endpoints.Player.MARKET_DOC
-import endpoints.Player.POSITION_MS_DOC
-import endpoints.Player.URI_DOC
-import endpoints.Player.VOLUME_PERCENT_DOC
+import spotlibfy.endpoints.Player.ADDITIONAL_TYPES_DOC
+import spotlibfy.endpoints.Player.AFTER_DOC
+import spotlibfy.endpoints.Player.BEFORE_DOC
+import spotlibfy.endpoints.Player.DEVICE_ID_DOC
+import spotlibfy.endpoints.Player.LIMIT_DOC
+import spotlibfy.endpoints.Player.MARKET_DOC
+import spotlibfy.endpoints.Player.POSITION_MS_DOC
+import spotlibfy.endpoints.Player.URI_DOC
+import spotlibfy.endpoints.Player.VOLUME_PERCENT_DOC
 import spotlibfy.scopes.Scopes.*
 
 /**

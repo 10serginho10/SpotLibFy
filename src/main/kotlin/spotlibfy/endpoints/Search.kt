@@ -1,11 +1,11 @@
-package endpoints
+package spotlibfy.endpoints
 
-import endpoints.Search.INCLUDE_EXTERNAL_DOC
-import endpoints.Search.LIMIT_DOC
-import endpoints.Search.MARKET_DOC
-import endpoints.Search.OFFSET_DOC
-import endpoints.Search.Q_DOC
-import endpoints.Search.TYPE_DOC
+import spotlibfy.endpoints.Search.INCLUDE_EXTERNAL_DOC
+import spotlibfy.endpoints.Search.LIMIT_DOC
+import spotlibfy.endpoints.Search.MARKET_DOC
+import spotlibfy.endpoints.Search.OFFSET_DOC
+import spotlibfy.endpoints.Search.Q_DOC
+import spotlibfy.endpoints.Search.TYPE_DOC
 
 
 /**

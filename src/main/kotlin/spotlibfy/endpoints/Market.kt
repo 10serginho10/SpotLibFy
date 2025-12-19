@@ -1,4 +1,4 @@
-package endpoints
+package spotlibfy.endpoints
 
 /**
  * Contains endpoints referenced to markets

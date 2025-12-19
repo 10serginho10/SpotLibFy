@@ -1,10 +1,10 @@
-package endpoints
+package spotlibfy.endpoints
 
-import endpoints.Show.IDS_DOC
-import endpoints.Show.ID_DOC
-import endpoints.Show.LIMIT_DOC
-import endpoints.Show.MARKET_DOC
-import endpoints.Show.OFFSET_DOC
+import spotlibfy.endpoints.Show.IDS_DOC
+import spotlibfy.endpoints.Show.ID_DOC
+import spotlibfy.endpoints.Show.LIMIT_DOC
+import spotlibfy.endpoints.Show.MARKET_DOC
+import spotlibfy.endpoints.Show.OFFSET_DOC
 import spotlibfy.scopes.Scopes.*
 
 /**

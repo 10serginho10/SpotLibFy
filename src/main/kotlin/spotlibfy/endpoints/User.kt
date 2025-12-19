@@ -1,12 +1,12 @@
-package endpoints
+package spotlibfy.endpoints
 
-import endpoints.User.IDS_DOC
-import endpoints.User.ID_DOC
-import endpoints.User.LIMIT_DOC
-import endpoints.User.OFFSET_DOC
-import endpoints.User.PLAYLIST_ID_DOC
-import endpoints.User.TIME_RANGE_DOC
-import endpoints.User.TYPE_DOC
+import spotlibfy.endpoints.User.IDS_DOC
+import spotlibfy.endpoints.User.ID_DOC
+import spotlibfy.endpoints.User.LIMIT_DOC
+import spotlibfy.endpoints.User.OFFSET_DOC
+import spotlibfy.endpoints.User.PLAYLIST_ID_DOC
+import spotlibfy.endpoints.User.TIME_RANGE_DOC
+import spotlibfy.endpoints.User.TYPE_DOC
 import spotlibfy.scopes.Scopes.*
 
 /**

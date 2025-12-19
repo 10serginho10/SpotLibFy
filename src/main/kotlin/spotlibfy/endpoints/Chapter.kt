@@ -1,8 +1,8 @@
-package endpoints
+package spotlibfy.endpoints
 
-import endpoints.Chapter.IDS_DOC
-import endpoints.Chapter.ID_DOC
-import endpoints.Chapter.MARKET_DOC
+import spotlibfy.endpoints.Chapter.IDS_DOC
+import spotlibfy.endpoints.Chapter.ID_DOC
+import spotlibfy.endpoints.Chapter.MARKET_DOC
 
 
 /**
