@@ -28,10 +28,11 @@ object Playlist {
 
     /**
      * Endpoint of users playlists
+     * @see [User.ENDPOINT_USER]
      * @author Serginho
      * @since 0.0.2
      */
-    const val ENDPOINT_USER = "https://api.spotify.com/v1/me/playlists"
+    const val ENDPOINT_USER = "${User.ENDPOINT_USER}/playlists"
 
     /**
      * Parameter playlist_id

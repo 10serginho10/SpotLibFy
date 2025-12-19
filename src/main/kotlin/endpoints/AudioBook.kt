@@ -20,7 +20,14 @@ object AudioBook {
      * @since 0.0.2
      */
     const val ENDPOINT = "https://api.spotify.com/v1/audio-books"
-    const val ENDPOINT_USER = "https://api.spotify.com/v1/me/audio-books"
+
+    /**
+     * Endpoint of users AudioBooks
+     * @see [User.ENDPOINT_USER]
+     * @author Serginho
+     * @since 0.0.2
+     */
+    const val ENDPOINT_USER = "${User.ENDPOINT_USER}/audio-books"
 
     /**
      * Parameter id

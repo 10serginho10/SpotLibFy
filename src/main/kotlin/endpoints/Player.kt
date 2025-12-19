@@ -18,11 +18,12 @@ import spotlibfy.scopes.Scopes.*
  */
 object Player {
     /**
-     * Endpoint of the players
+     * Endpoint of users players
+     * @see [User.ENDPOINT_USER]
      * @author Serginho
      * @since 0.0.2
      */
-    const val ENDPOINT_USER = "https://api.spotify.com/v1/me/player"
+    const val ENDPOINT_USER = "${User.ENDPOINT_USER}/player"
 
     /**
      * Parameter market

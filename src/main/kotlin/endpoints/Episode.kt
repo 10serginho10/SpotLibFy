@@ -22,10 +22,11 @@ object Episode {
 
     /**
      * Endpoint of users episodes
+     * @see [User.ENDPOINT_USER]
      * @author Serginho
      * @since 0.0.2
      */
-    const val ENDPOINT_USER = "https://api.spotify.com/v1/me/episodes"
+    const val ENDPOINT_USER = "${User.ENDPOINT_USER}/episodes"
 
     /**
      * Parameter id

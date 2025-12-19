@@ -23,10 +23,11 @@ object Album {
 
     /**
      * Endpoint of users albums
+     * @see [User.ENDPOINT_USER]
      * @author Serginho
      * @since 0.0.2
      */
-    const val ENDPOINT_USER = "https://api.spotify.com/v1/me/albums"
+    const val ENDPOINT_USER = "${User.ENDPOINT_USER}/albums"
 
     /**
      * Parameter id
