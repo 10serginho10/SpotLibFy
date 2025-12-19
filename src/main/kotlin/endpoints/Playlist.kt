@@ -173,7 +173,7 @@ object Playlist {
      *
      * Get a playlist owned by a Spotify user.
      *
-     *@param playlistId See [PLAYLIST_ID_DOC]
+     * @param playlistId See [PLAYLIST_ID_DOC]
      * @param market See [MARKET_DOC]
      * @param fields See [FIELDS_DOC]
      * @param additionalTypes See [ADDITIONAL_TYPES_DOC]
