@@ -1,7 +1,7 @@
 package endpoints
 
 /**
- * Contains endpoints referenced to genres
+ * Contains endpoints referenced to markets
  * @author Serginho
  * @since 0.0.2
  */
