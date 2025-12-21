@@ -7,13 +7,15 @@ plugins {
 }
 
 group = "com.github.10serginho10"
-version = "0.0.2"
+version = "0.0.3"
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
+    api("io.ktor:ktor-client-core:3.3.3")
+    api("io.ktor:ktor-client-cio:3.3.3")
     testImplementation(kotlin("test"))
 }
 
